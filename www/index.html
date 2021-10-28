@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Metas -->
+        <meta charset="utf-8">
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        
+        <!-- Styles -->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/index.css">
+        
+        <!-- Scripts -->
+        <script src="./../cordova.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="bootstrap/js/bootstrap.js"></script>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+        
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+        
+        <script src="js/firebase.js"></script>
+        <script src="js/index.js"></script>
+        
+        <!-- Title -->
+        <title>Agendamento - Index</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html">Agendamento App</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Opções
+                                </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="index.html">Cadastrar</a></li>
+                                        <li><a class="dropdown-item" href="consultar.html">Consultar</a></li>
+                                        <li><a class="dropdown-item" href="editar.html">Editar</a></li>
+                                        <li><a class="dropdown-item" href="excluir.html">Excluir</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="card mb-3 col-12">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadastrar</h5>
+                        <p class="card-title">Cadastre novos clientes</p>
+                        <p>
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Nome:</label>
+                                    <input type="text" class="form-control" id="txtNome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Telefone:</label>
+                                    <input type="tel" class="form-control" id="txtTelefone"
+                                        placeholder="(xx)xxxxx-aaaa">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Origem:</label>
+                                    <select class="form-control" id="txtOrigem">
+                                        <option>Celular</option>
+                                        <option>Fixo</option>
+                                        <option>Whatsapp</option>
+                                        <option>Facebook</option>
+                                        <option>Instagram</option>
+                                        <option>Google Meu Negócio</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Data do Contato:</label>
+                                    <input type="date" class="form-control" id="txtDataContato">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Observação:</label>
+                                    <textarea type="text" class="form-control" id="txtObservacao" rows="3"></textarea>
+                                </div>
+                                <br>
+                                <button type="button" id="btnInserir" class="btn btn-primary">Cadastrar</button>
+                            </form>
+                        </P>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
